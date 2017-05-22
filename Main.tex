@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt,twoside,english,openleft]{tesi}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\setcounter{tocdepth}{4}
+\usepackage{graphicx}
+%\usepackage[ansinew]{fontenc}
+\usepackage{subfigure}
+\usepackage{amsthm}
+\usepackage{longtable}
+\usepackage{geometry} 
+\usepackage{moreverb}
+\usepackage{appendix}
+%\usepackage{biblatex}
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{fancyhdr}
+\usepackage{texdraw,fancyhdr,tabularx,supertabular,psfrag,multirow}
+\usepackage[babel]{csquotes}
+\usepackage[authoryear]{natbib}
+%\usepackage[ansinew]{inputenc}
+
+
+\graphicspath{{./Images/}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection.\#1}}
+%\pagestyle{fancy}                       % Om aan te geven welke bladzijde stijl we gebruiken.                     
+%
+%\newcommand{\bm}[1]{\mbox{\boldmath$#1$}} %Zet dit op 0.4pt voor een mooie lijn.
+%\renewcommand{\headrulewidth}{0.4pt}      % Geen lijn onder de header.
+%\renewcommand{\footrulewidth}{0.4pt}
+\newcommand{\latex}{\LaTeX\xspace}
+\newcommand{\de}{\partial}
+%\usepackage{hyperref}
+%\hypersetup{colorlinks=true,linkcolor=blue}%%%%%%%   ATTIVARE ALLA FINE   %%%%%%%%%%%%%%%%%%%
+\geometry{left=3cm}
+\geometry{right=3cm}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+
+%\input{fronte.tex}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[EL]{\nouppercase{\textit{Bibliography Report}}} 
+\fancyhead[OR]{\nouppercase{\textit{\leftmark}}} 
+\fancyhead[ER]{\nouppercase{\textit{Luca Marioni}}} 
+\fancyfoot{}
+%\tableofcontents
+
+%\listoffigures
+%\listoftables
+%\input{introduzione}
+
+%\input{ringraziamenti}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Appendici}
+\pagenumbering{roman}
+\fancyhead{}
+\fancyhead[EL,OR]{\nouppercase{\textit{\leftmark}}}
+\fancyfoot{}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{unsrt}
+\nocite{*}
+\bibliography{Biblio}
+
+
+
+
+
+\end{document}

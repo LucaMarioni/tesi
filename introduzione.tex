@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{fancy}
+\chapter{Bibliography report}
+
+ 
+ 
+ \section{Introduction}
+ Electromagnetic stirring and braking are techniques that consist in the superimposition of a magnetic field over the flow of fluid metal in continuum casting process. This methods aims at driving the flow, control velocities and temperatures inside the caster, in order to have a good uniformity in temperature, high casting speed and less inclusions, so defects, as possible. The electromagnetic influence in continuous casting process is present in almost each level, from the ladles to the strands, but my work will focus on in-mould stirring applications. The nature of the process, its complexity and the high temperatures make experimental data very difficult to take; for this reason, these data are not sufficient to analyse the process, so fast and accurate numerical simulations have to be carried out. In this memory different models are reported in order to present the variety of aspects that can be considered in order to model the global phenomenon; since the global physics is very complex, it's important to understand which are the variables that really affect the final results in order to not make the coupled simulation heavier than the necessary. After the set up of the models it's presented the real core of the work, i.e. the different coupling algorithms between electromagnetic and mechanics effects; in fact, these two fields have been studied separately for years, which lead to different solvers and commercial software.
+ 
+
+
+
+\section{Models and simplifying assumptions}
+\subsection{Electromagnetic Models}
+Due to the fact that the conductor isn't motionless, the electromagnetic models in magnetohydrodynamics have to consider the development of secondary currents produced by relative velocity between the fluid and the magnetic field. Given the general expression of electric current in \eqref{j}, this interaction can be seen as the generation of a secondary current by the convective term $\textbf{u} \times \textbf{B}$. This is the term that most of all rules the interaction, since it affects both the magnetic field and the Lorentz force.
+\begin{equation}
+\textbf{j}=\sigma (\textbf{E}+\textbf{u} \times \textbf{B)}
+\label{j}
+\end{equation}
+ An adimensional measure of this term can be given by the ratio between the characteristic time for the magnetic diffusion ($\mu \sigma L^2$, with $\mu $ being the magnetic permeability and $L$ a characteristic length scale) and the transit time ($L/\textbf{u}$, $\textbf{u}$ being the average velocity of the system); this ratio is defined as the \textit{magnetic Reynolds number} $Rm:=\mu \sigma \textbf{u} L$ and measures how much is the superimposed magnetic field distorted by conductor's flow: if $Rem<<1$ the kinematic term in \eqref{j} can be neglected.
+\subsubsection{Magnetic induction method}
+\label{chapmagneticinductionmethod}
+In the case of a strong interaction between the two fields, i.e. $Rem\geq 1$, the "magnetic induction method" is proposed\cite{Thomas2009}. Maxwell's equations are combined with Ohm's law to obtain a transport equation (eq. \eqref{mim}) for the induced magnetic field, i.e. $\textbf{b}$ in terms of the total field field, i.e. $\textbf{B}$ and the current density, i.e. $\textbf{j}$.
+\begin{subequations}
+\begin{equation}
+\cfrac{\de \textbf{b}}{\de t}+(\textbf{u}\cdot \nabla )\textbf{b}=\cfrac{1}{\mu \sigma}\nabla^2 \textbf{b}+((\textbf{B}_0+\textbf{b})\cdot \nabla)\textbf{u}-(\textbf{u}\cdot \nabla)\textbf{B}_0-\cfrac{\de \textbf{B}_0}{\de t}+\cfrac{1}{\mu \sigma}\nabla^2\textbf{B}_0
+\label{mim}
+\end{equation}
+\begin{equation}
+\textbf{B}=\textbf{B}_0+\textbf{B}
+\label{scompo}
+\end{equation}
+\begin{equation}
+\textbf{j}=\cfrac{\nabla \times \textbf{B}}{\mu}
+\end{equation}
+\begin{equation}
+\textbf{f}_L=\textbf{j}\times \textbf{B}
+\end{equation}
+\end{subequations}
+In equation \eqref{scompo} external superimposed magnetic field and induced magnetic field are separated. This choice is due to the fact that for industrial applications, experimental measurements of the magnetic field produced by the electromagnetic device are available; the most common procedure is to measure the field produced by the device in the empty space, scale it (considering electromagnetic parameters constant, since the fluid reasonably over the Curie point in the mold) and add Lorentz force as a source term in Navier-Stokes equation.\\
+This method is largely used in Electromagnetic Braking applications, as reported in \cite{Cukierski2008} and \cite{Vogl2014}. It's remarkable that in this case the electromagnetic device is not modelled, since the primary magnetic field resolution is bypassed thank to experimental measurements, which lead to focus the attention on the fluid-mechanic problem.
+\subsubsection{Current vector potential method}
+\label{chapcvp}
+When $Rem<<1$, potential formulations of EM problem are preferred. As proposed in \cite{Natarajan2004}, the EM fields can be expressed in terms of current vector potential ($\textbf{T}\mid \textbf{j}=\nabla \times \textbf{T}$) and reduced magnetic scalar potential, $\Psi$, expressed as
+\begin{equation*}
+\textbf{H}=\textbf{T}-\nabla \Psi
+\end{equation*}
+where $\textbf{H}$ is magnetic field intensity.\\
+From Faraday's equation and Ohm's law, the differential equation for T may be written as
+\begin{equation}
+\nabla \times \left(\cfrac{1}{\sigma}\nabla \times \textbf{T}\right)=-\cfrac{\de}{\de t}(\mu_0 \textbf{T})+ \cfrac{\de}{\de  t} (\mu_0 \nabla \Psi)
+\label{cvp1}
+\end{equation}
+where $\sigma$ and $\mu_0$ are the electrical conductivity and magnetic permeability of the metal, respectively.\\
+If the electrical conductivity, $\sigma$, is constant and the applied magnetic field generated by the inductor is time harmonic of frequency $\omega$, using Coulomb gauge, equation \ref{cvp1} becomes:
+\begin{equation}
+\nabla^2\textbf{T}=j \sigma \omega \mu_0 (\textbf{T}-\nabla \Psi)
+\end{equation}
+Consequently the Lorentz force gets calculated as following:
+\begin{subequations}
+\begin{equation}
+f_L=\cfrac{\mu_0}{2}Re(\textbf{j}\times \textbf{H})
+\end{equation}
+\begin{equation}
+f_L=\cfrac{\mu_0}{2}Re((\nabla\times\textbf{T})\times(\textbf{T}-\nabla \Psi)^{*})
+\end{equation}
+\end{subequations}
+where $^{*}$ denotes the complex conjugate.
+\subsubsection{Magnetic vector potential method}
+\label{chapmagneticpotentialmethod}
+This method, like the one exposed in \ref{chapcvp}, aims at capturing the EM field related phenomena by describing \textbf{B} and \textbf{H} through their potentials, i.e. \textbf{B}, the magnetic vector potential, and $\Phi$, the scalar electric potential.\\
+The molten steel flowing through the magnetic field generates an electric current \textbf{j}, which flows through the domain and generates the Lorentz force $\textbf{f}_L$, and it's given by
+\begin{equation}
+\textbf{j}=\sigma(\textbf{E}+\textbf{u}\times \textbf{B})=\sigma(-\nabla \Phi-\dot{\textbf{A}}+\textbf{u}\times \nabla \times \textbf{A})
+\end{equation}
+where $\textbf{B}=\nabla \times \textbf{A}$, $\sigma$ is the electrical conductivity and $\Phi$ is the electric potential.\\
+The charge conservation condition, $\nabla \cdot \textbf{j}=0$, is then used to find the potential $\Phi$.
+\begin{equation}
+\nabla \cdot (\sigma \nabla \Phi )=\nabla \cdot (\sigma ( \textbf{u}\times \nabla \times \textbf{A}))
+\end{equation}
+Lorentz force $\textbf{f}_L$ is given by:
+\begin{equation}
+\textbf{f}_L=\textbf{j}\times \nabla \times \textbf{A}
+\end{equation}
+It is remarkable how in the literature there are few descriptions on how the system is solved. Bubnov-Galerkin FEM is commonly used, but providing advanced techniques to model EMF doesn't emerge as a core-topic. This fact is due to the opportunity of taking experimental measurements of the EMF and focus on the Lorentz forces' computation. Further details about coupling techniques are still reported in section \ref{chapnumericalschemes}.
+
+\subsection{Fluid mechanics}
+Molten metal velocity field is usually computed by Petrov-Galerkin FEM or FVM. In few cases a light coupling between the pressure $p$ and the velocity $u$ is supposed to exist, and the SIMPLE algorithm is used (or its variations like SIMPLEC or SIMPLER). SIMPLE (Semi-Implicit Method for Pressure Linked Equations) is a predictor corrector algorithm which is composed by three main parts:
+\begin{itemize}
+
+\item An approximation of the velocity field is obtained by solving the momentum equation. The pressure gradient term is calculated using the pressure distribution from the previous iteration or an initial guess.
+\item The pressure equation is formulated and solved in order to obtain the new pressure distribution.
+\item Velocities are corrected and a new set of conservative fluxes is calculated. 
+\end{itemize}
+About turbulence modelling, direct numerical integration and $k-\omega$ RANS aren't considered to well fit the problem, both in terms of precision and cost in computational time. LENS approach is often used, most of the times with Smagorinsky-Lilly model. But The methods which is more often used is the $k-\varepsilon$ model. This method is obtained from a Reynolds averaging of NS equations. The most common and efficient model can than be described as follow:\\
+Mass conservation:
+\begin{equation}
+\nabla \cdot (\rho \textbf{u})=0
+\end{equation}
+Turbolent NS equation:
+\begin{equation}
+\rho(\textbf{u}\cdot \nabla )\textbf{u}=-\nabla p -[ \nabla\cdot \mu_l + \mu_t \textbf{D}]+\textbf{f}_L
+\end{equation}
+where
+\begin{equation}
+\textbf{D}_{ij}=\textbf{u}_{i,j}+\textbf{u}_{j,i}
+\end{equation}
+$\textbf{u}$ is the time-averaged velocity, $\rho $ is the fluid density and $\mu_l$ and $\mu_t$ are the laminar and turbulent viscosity, respectively.\\
+Turbulent viscosity is than calculated by $k-\varepsilon$ turbulent model:
+\begin{equation}
+\left\{
+\begin{aligned}
+&\mu_t=c_{\mu} \cfrac{\rho k^2}{\varepsilon}\\
+&\rho(\textbf{u}\cdot \nabla)k=\nabla \left( \cfrac{\mu_t}{\sigma_k}+\mu_l \right)\nabla k + G - \rho \varepsilon + S_k\\
+&\rho(\textbf{u}\cdot \nabla)\varepsilon=\nabla \left( \cfrac{\mu_t}{\sigma_{\varepsilon}}+\mu_l \right)\nabla \varepsilon ++c_1 \cfrac{\varepsilon}{k}G - c_2\rho \cfrac{\varepsilon^2}{k}\\
+\end{aligned}
+\right.
+\end{equation}
+where $k$ is the turbulent kinetic energy, $\varepsilon$ is the turbulent energy dissipation, $G=\mu_t \textbf{D}_{ij}\textbf{u}_{i,j}$ is the rate of generation of turbulence and $C_{\mu},c_1,c_2,\sigma_k,\sigma_{\varepsilon}$ and $c_{\mu}$ are constants. $S_k$ is a sink term to simulate the damping effect of the magnetic field given by
+\begin{equation}
+S_k=c_{MHD}\cfrac{\sigma}{\rho}B_{0}^{2}k
+\end{equation}
+where $c_{MHD}$ is an adjusting factor and $\rho$ is the density.\\
+A second important aspect in fluid-mechanic computations is the treatment of multiphase phenomena, i.e. Argon bubbles injection and meniscus variation. These two phenomena are often neglected or simplified despite their great influence in metallurgic aspects and affect sensibly inclusions in the final product. The free surface problem is usually treated by using empirical relations or the Shadow algorithm\cite{Fujisaki2001}. The Argon bubble injection is rarely considered and gets usually modelled bot by Lagrangian or Eulerian methods. On one hand, when the total Argon rate is greater than $10\%$, Eulerian methods are preferred; these is the case of the zone close to the nozzle where lower eddy recirculated bubbles cross the entry flow. On the other hand, when the total Argon rate is lower than $10\%$, Lagrangian methods are preferred since they can track the bubbles with a good accuracy and without a large request of computational time. Finally, since the fluid is consider incompressible, buoyancy due to thermal effects is added as a force source term, i.e. Boussinesq approximation\cite{2007}:
+\begin{equation}
+\textbf{f}_t=\rho \textbf{g}\beta(T-T_0)
+\end{equation}
+
+
+\subsection{Heat transfer and Solidification}
+Despite the fact that heat transfer and solidification processes are crucial to understand in-mould phenomena, they don't play a relevant role in the coupling between electromagnetic field and fluid flow. Liquid steel fraction in the mold is almost 100\%: mushy zone and solidified shell result to be a thin layer between the fluid and the mold; the formation of these two different phases is largely affected by fluid velocity, but it doesn't affect fluid motion. Heat propagation has its major impact in the electric material parameters, which are quite susceptible to variations in temperature.\\
+The equation assumed to rule this phenomenon is widely identified in the following
+\begin{equation}
+\cfrac{\de(\rho c_pT)}{\de t}+\nabla(\rho \textbf{u} c_pT)=\nabla \cdot (\lambda_{eff}\nabla T)+S_{th}
+\end{equation}
+where $S_{th}$ is a thermal source term which includes Joule heat and latent heat of solidification. The Joule term is usually neglected because it's smaller if compared to other thermal sources. The importance of the second latent term is not well discussed in literature, anyway I report the expression proposed by Vogl\cite{Vogl2014}:
+\begin{equation}
+S_{th}=\left( \cfrac{\de \rho_s f_s}{\de t} + \nabla(\textbf{u}_s \rho_s f_s~) \right)H_L
+\end{equation}
+where $H_L$ is the latent heat, $c_p$ the specific heat capacity and the subscription $s$ indicates the solid values.\\
+The second phase volume fraction is usually calculated as the linear interpolation between two temperatures; the width of the solidified shell thickness at a certain depth from the meniscus can also be approximated as proposed in \cite{Singh2014}:
+\begin{equation}
+s=k\sqrt{t}
+\end{equation}
+where $t$ is the time taken by the casting to cover the space from the meniscus to the considered point, and $k$ is a constant($k\simeq 2.75\, mm/\sqrt{s}$) based on experimental data in real casters.
+
+\subsubsection{Harmonic approach}
+AC current base EMS usually work at frequencies from $1$ to $10\, Hz$ in order to both get a good excitement of the flow and not be affected by the skin shielding of the mold. This range lead the electromagnetic field evolution to have a different scale from the mechanical one, since the period of mechanical transitions is far higher than the period of magnetic field. For this reason a steady-harmonic approach could be used for electromagnetic computations, considering the problem in evolving in the frequency domain instead of the time domain:
+
+
+\begin{equation}
+  \left\{
+  \begin{aligned}
+  \nabla \times \textbf{E} &= -\dot{\textbf{B}} & in \, \Omega_t\\
+  \nabla \times \textbf{H} &= -\textbf{j}+\dot{\textbf{D}} & in \, \Omega_t \\
+  \end{aligned}
+  \right.
+  \Rightarrow
+    \left\{
+  \begin{aligned}
+  \nabla \times \textbf{E} &= -i\omega \textbf{B} & in \, \Omega_{\omega}\\
+  \nabla \times \textbf{H} &= \textbf{j}+i\omega \textbf{D} & in \, \Omega_{\omega} \\
+  \end{aligned}
+  \right.
+\end{equation}
+
+
+
+
+
+This approach finally lead to the "extended" Helmholtz equation in equation \eqref{hel}.
+\begin{equation}
+\nabla \times \nabla \times \underline{\textbf{A}} + i\omega \mu \sigma \underline{\textbf{A}}+\sigma \textbf{u}\times \nabla \times \underline{\textbf{A}}=\mu \underline{\textbf{j}}
+\label{hel}
+\end{equation}
+where $\underline{\textbf{A}}$ is the phasor of the vector magnetic potential $\textbf{A}$.\\
+
+Lorentz force can then be expressed as the sum of a constant averaged term and a periodical one, as follows:
+\begin{equation}
+\label{deco}
+\textbf{f}_L=\bar{\textbf{f}}+\textbf{f}cos(2\omega t + \theta )
+\end{equation}
+As stated in \cite{Satou2009}, the second term in equation \eqref{deco} can be neglected without affecting the global quality of results, but has a significant impact on the treatment of free surface analysis. Also in \cite{Barglik2010} is proposed to consider just the avarage term of the Lorentz force
+\begin{equation}
+\textbf{f}_L=Re\{ \textbf{j}_{eddy}\times \nabla \times \underline{\textbf{A}^{*}} \}
+\end{equation}
+where
+\begin{equation}
+\underline{\textbf{j}}_{eddy}=\omega \sigma \underline{\textbf{A}}\cdot i
+\end{equation}
+$i$ is the imaginary unit and $\underline{\textbf{A}}^{*}$ is the complex conjugate to $\underline{\textbf{A}}$.
+\section{Numerical coupling schemes}
+\label{chapnumericalschemes}
+Coupling algorithms can be divided into two main families: 1M1S approach  (one mesh, one solver) and 2M2S approach (two meshes, two solvers approach).\\
+\paragraph{1M1S approach}
+In the first approach the magnetic field is calculated with the fluid flow using a finite volume CFD-solver; the most common commercial solver used in literature is FLUENT, to which can be added a MHD add-on in order to solve the electromagnetic system. The main advantage of this method is that the same mesh and solver (an iterative solver) can be used for both mechanic and electromagnetic computations. It's remarkable the fact that the fluid computations are somehow preferred to electromagnetic ones in this approach: the computation domain is set as the fluid one, so that electromagnetic boundary conditions are not easily and accurately set down. The common way to face this problem is to include a large air domain surrounding the mold into NS computations or to use  "insulating boundary" conditions, which suppose the mold to be perfectly electrically insulated. In addition the electromagnetic device is not modelled: the computations deal only with the secondary, induced magnetic field due to eddy currents in the fluid, while an external, constant magnetic field is supposed to be added after experimental measurements. The aforementioned MHD add-on (on which is based the great part of literature production that uses this algorithm) includes two different calculation methods for EM field resolution: magnetic induction method (see section \ref{chapmagneticinductionmethod}) and electric potential method (see section \ref{chapmagneticpotentialmethod}). Notice that in the first one, $b$ is the unknown and $B_0$ is a source term. This method is applicable for steady and transient simulations. Harmonic simulations are not possible, so simulations with periodic excitations have to be resolved in a transient way, which leads to small time step sizes and high computational effort. The second method is derived from the potential method:
+\begin{equation}
+\nabla^2=\nabla \cdot(\textbf{u}\times \textbf{B}_0)
+\label{ep1m1s}
+\end{equation}
+Both 1M1S methods don't fit well stirring applications, because the transient analysis would lead to high computational cost; in addition to the high computational effort, the lack of accuracy related to the difficult to set EM boundary conditions at the mold boundary makes this approach not worth of further investigation.
+\paragraph{2M2S approach}
+This approach (used by Barna in \cite{Barna2009}) follows a more complex strategy. The electromagnetic simulation uses its own mesh and solver, different from the CFD one, e.g. ANSYS Emag. The creation of a mesh dedicated to EM computations gives the opportunity to model the EM device as well and to include a larger spatial domain, more suitable to the electromagnetic field evolution. The surrounding air cylinder has to be chosen in order to capture a great part of the magnetic field lines close to the mold. In this case, both steady or harmonic simulations can be performed. In order to manage the exchange of information and variables flux between the two different solvers, an additional communication tool has to be developed; in the case of the aforementioned commercial software, i.e. ANSYS Emag and FLUENT, this work is carried out by MpCCI, a commercial code coupling interface. This exchange of information between the two codes leads to the need of interpolation, which is a sensible source of error. The time averaged electromagnetic force gets interpolated as following\cite{2007}
+\begin{equation}
+F_{Fluent}=\cfrac{d_{i}^{-1}F_{ANSYS}^{i}}{d_{i}^{-1}}
+\end{equation}
+where $F_{Fluent}$ is the time average electromagnetic volume force density at the interpolated point which is the centroid of the certain cell in FLUENT, $F_{ANSYS}^{i}$ the time average magnetic volume force density at the $i-th$ in ANSYS and $d_i$ is the distance between the interpolated point and the $i-th$ node; this interpolation is ruled by the parameter $R$, which is the radius in which FLUENT force density value gets affected by ANSYS output.\\
+Another important coupling strategy to point out is the so-called "\textbf{save field method}"\cite{Javurek2008} and it rules the variables exchange in 2M2S approach. In the context of transient analysis, instead of using the electromagnetic field values of the previous time step, the values from the same point at the previous period are used as initial data for each time step. Because the magnetic field is approximately periodic and the velocity field does not change much during a period of the EM field, these values are much better and convergence is reached considerably faster. On one hand this method needs a very fine integration during the first period and requires more memory in order to store separately the variables from two consecutive time steps, on the other hand it leads to a drastic reduction of the number of sub-iteration necessary to converge (e.g. twenty times lower).
+\section{Final comment, limits and future developments}
+From the literature a lack of in-depth studies about the electromagnetic field computations is evident. In order to increase the accuracy of the global simulation, would be interesting to analyse the electromagnetic problem by using different techniques (transient or harmonic approach), different elements and different boundary conditions to evaluate if literature neglected phenomena are really not worth of being taken into account. \\
+On the other side, from the fluid mechanics point of view, would be important to investigate a good way to simulate Argon bubbles, meniscus variation and slag inclusions; these aspects are usually considered in a very approximate way, but they really are linked to the most interesting variables from the metallurgic point of view.\\
+The heat transfer phenomena and solidification processes seem to be of secondary importance if compared to EM and fluid fields, but it's remarkable that a better approximation of the solidified shell could affect sensibly the electromagnetic field because of the skin shielding effect, especially at high frequencies.\\
+In literature 2M2S approach emerges as the more suitable approach for EMS. For the time being the global physics seems to be lightly coupled, since the time scales of the two main problems are different. Anyway the real influence of the convective term $\textbf{u}\times \textbf{B}$ has to be evaluated, since in the literature no unique answer emerges; in addition, this term has no the same magnitude in all the domain: where the velocity is high (inside and close to the nozzle) it plays a more sensible role then in other zones of the domain. For this reason could be interesting to considering the possibility to split the domain in two parts, i.e. the nozzle and the rest of the mold, in order to use techniques and meshes that better fit problem physics. Another relevant issue about the information exchange between the two solvers is the domain evolution: in literature this is not considered a problem since no meniscus shape variation is usually taken into account, but it's remarkable that the Lorentz forces that arise in the meniscus waves can sensibly affect the surface behaviour and, consequently, slag inclusions. Another interesting aspect to point out is the interpolation between the two meshes: it is clear that it is one of the greatest sources of error, so it will necessary to find out a good way to interpolate the less and the best as possible, considering the real magnitudes of variables.\\
+Finally, the literature present many different applications of stirring, with different stirrers, stirrers' position and objectives; despite the fact that all these applications share the same principle, it's relevant that they present different mechanisms, magnitude of variables and validation techniques.

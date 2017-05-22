@@ -1,0 +1,11 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {A}Process introduction}{3}
+\contentsline {section}{\numberline {A.1}Introduction}{3}
+\contentsline {subsection}{\numberline {A.1.1}Continuous Casting}{3}
+\contentsline {section}{\numberline {A.2}Physics and phenomena involved in the process}{3}
+\contentsline {subsection}{\numberline {A.2.1}Electromagnetic Field application}{4}
+\contentsline {subsubsection}{Electromagnetic Braking (EMBr)}{4}
+\contentsline {subsubsection}{Electromagnetic Stirring (EMS)}{5}
+\contentsline {chapter}{\numberline {B}Validation: experimental and Analytic results}{9}
+\contentsline {chapter}{\numberline {C}Multi-phase modelling}{}
+\contentsline {chapter}{Bibliography}{}

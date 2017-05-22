@@ -1,0 +1,74 @@
+ \begin{figure} [t!]
+ \centering
+ \subfigure[Coefficienti pariziali di sicurezza sulle azioni]
+   {\includegraphics[width=.5\textwidth]{A}}
+ \hspace{5mm}
+ \subfigure[Coefficienti pariziali di sicurezza sui parametri dei materiali]
+   {\includegraphics[width=.5\textwidth]{M}}
+    \vspace{5mm}
+    \centering
+    \subfigure[Coefficienti pariziali di sicurezza sulle resistenze globali]
+      {\includegraphics[width=.6\textwidth]{R}}
+ \caption{Coefficienti parziali di sicurezza} \label{ntc}
+ \end{figure}
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ utf8x------>LETTERE ACCENTATE
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ \begin{equation}
+ \begin{split}
+ &N_d=550\cdot 1,3+180\cdot 1,3+350 \cdot 1,5=1474\,kN \\
+ &M_d=70\cdot 1,3+ 25 \cdot 1,5=128,5\,kNm \\
+ &H_d=45 \cdot 1,3+ 15 \cdot 1,5= 81 \,kN
+ \end{split}
+ \end{equation}
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{tabular}{|l|c|c|}
+\hline
+ESTREMO & Taglio [kN] & Momento [kNm]   \\
+\hline
+Sinistra       & 161     & -2 \\
+\hline
+Destra         & -123     & 11  \\
+\hline
+\end{tabular}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\[ |x| = \left\{ \begin{array}{ll}
+         x & \mbox{if $x \geq 0$};\\
+        -x & \mbox{if $x < 0$}.\end{array} \right. \] 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+pdflatex + F11 + pdf +pdf: BIBLIOGRAFIA
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\listoftables
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{table} [h!]
+  \caption{Calcolo $ \sigma_s $} \label{sigmas}
+\centering
+  \begin{tabular}{|l|c|c|c|c|c|c|}   
+  \hline
+    & & & \multicolumn{2}{|c|}{C. Frequente} & \multicolumn{2}{|c|}{C. Quasi Permanente}   \\
+  \hline
+Sez.&$ M_{cr}^{'}[kNm] $&$ M_{cr}^{''}[kNm] $&$M[kNm]$&$ \sigma_s[kPa] $&$M[kNm]$&$ \sigma_s[kPa] $\\
+\hline
+AA&35&33&18&29&17&27\\
+BB&33&31&15,5&24&12&19\\
+CC&38&36&44,5&178&42&168\\
+DD&33&31&26&42&22&35\\
+EE&36&34&31&45&29&42\\
+\hline
+
+  \end{tabular} 
+  \end{table}
+  % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+  \eqref \vref \ref \cite \citet \citep
+  % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+  \begin{equation}
+  l_0=max
+  \left\{
+  \begin{aligned}
+  \label{nomechevuoitu}
+  &(\sum_{i=1}^{n} x_i^2)a + (\sum_{i=1}^{n} x_i)b = \sum_{i=1}^{n} x_i y_i \\
+  &(\sum_{i=1}^{n} x_i)a + nb = \sum_{i=1}^{n} y_i
+  \end{aligned}
+  \right.
+  \end{equation} 

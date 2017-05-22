@@ -1,0 +1,914 @@
+% This file was created with JabRef 2.8.1.
+% Encoding: Cp1252
+
+@PREAMBLE{ciao}
+
+@ARTICLE{Asai1981,
+  author = {Asai, S. and Nishio, N. and Muchi, I.},
+  title = {Theoretical Analysis and Model Experiments on Electromagnetically
+	Driven Flow in Continuous Casting},
+  journal = {Tetsu-to-Hagane},
+  year = {1981},
+  volume = {67},
+  pages = {333-340},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{Ausas2010,
+  author = {Ausas, R. F. and Dari, E. A. and Buscaglia, G. C.},
+  title = {A geometric mass-preserving redistancing scheme for the level set
+	function},
+  journal = {International Journal for Numerical Methods in Fluids},
+  year = {2010},
+  volume = {54},
+  pages = {1-22},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@ARTICLE{Baokuan2006,
+  author = {Baokuan, L. and Tsukihashi, F.},
+  title = {Effects of Electromagnetic Brake on Vortex Flows in Thin Slab Continuous
+	Casting Mold},
+  journal = {ISIJ International},
+  year = {2006},
+  volume = {46},
+  pages = {1833-1838},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@CONFERENCE{Barglik2010,
+  author = {Barglik, J. and Dolega, D. and Smagor, A.},
+  title = {International Scientific Colloquium - Modelling for Material Processing},
+  booktitle = {Coupled Temperature-electromagnetic - Flow Fields in Electromagnetic
+	Stirrer with Rotating Magnetic Field},
+  year = {2010},
+  address = {Riga},
+  month = {September},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Barna2009,
+  author = {Barna, M. and Javurek, M. and Reite, J. and Lechner, M.},
+  title = {Numerical Simulations of Mould Electromagnetic Stirring for Round
+	Bloom Strands},
+  journal = {BHM Berg- und Huttenmannische Monatshefte},
+  year = {2009},
+  volume = {154},
+  pages = {518-522},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@CONFERENCE{2014,
+  author = {Barna, M. and Javurek, M. and Reite, J. and Watzinger, J. and Kaufmann,
+	B. and Kirschen, M.},
+  title = {European Continuous Casting Conference},
+  booktitle = {Numerical simulations of the continuous casting of steel with electromagnetic
+	braking and stirring},
+  year = {2014},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@CONFERENCE{Barna2014,
+  author = {Barna, M. and Willers, B. and Javurek, M. and Reiter, J. and Eckert,
+	S.},
+  title = {European Continuous Casting Conference},
+  booktitle = {Investigations of the liquid steel flow in slab casters with electromagnetic
+	brakes and round bloom casters},
+  year = {2014},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@PHDTHESIS{Basset2009,
+  author = {Basset, O.},
+  title = {Simulation numerique d'ecoulements multi-fluides sur grille de calcul},
+  school = {Ecole de Mines},
+  year = {2009},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@TECHREPORT{Beitelman2005,
+  author = {Beitelman, L. S. and Lavers, D. and Tallback, G. and Curran, C.},
+  title = {A novel FEMS system for continuous casting of steel billets and blooms},
+  institution = {ABB},
+  year = {2005},
+  owner = {luca.marioni},
+  timestamp = {2014.11.28}
+}
+
+@UNPUBLISHED{Ben-David,
+  author = {Ben-David, O. and Levy, A. and Mikhailovich, B.},
+  title = {MHD flow under the impact of permanent magnets driving system},
+  note = {Ben-Gurion University of the Negev, P.O.B. 653, Beer-Sheva 8410502,
+	Israel},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Besson1991,
+  author = {Besson, O. and Bourgeois, J. and Chevalier, P. A. and Rappaz, J.
+	and Touzani, R.},
+  title = {Numerical Modelling of Electromagnetic Casting Processes},
+  journal = {Journal of Computational Physics},
+  year = {1991},
+  volume = {92},
+  pages = {484-507},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{1991a,
+  author = {Bourgeois, J. and Chevalier, P. A. and Picasso, M. and Rappaz, J.
+	and Touzani, R.},
+  title = {Magnetohydrodynamic problem in the aluminium industry},
+  journal = {MHD Problem in Aluminium Industry},
+  year = {1991},
+  volume = {19},
+  pages = {479-508},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{Brown2001,
+  author = {Brown, D. L. and Cortez, R. and Minion, M. L.},
+  title = {Accurate Projection Methods for the Incompressible Navier-Stokes
+	Equations},
+  journal = {Journal of Computational Physics},
+  year = {2001},
+  volume = {168},
+  pages = {464-499},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@PHDTHESIS{Chaudhary2011,
+  author = {Chaudhary, R.},
+  title = {Studies of turbolent flows in continuous casting of steel with and
+	without magnetic field},
+  school = {University of Illinois at Urbana-Champaign},
+  year = {2011},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@ARTICLE{Cukierski2008,
+  author = {Cukierski, K. and Thomas, B. G.},
+  title = {Flow Control with Local Electromagnetic Braking in Continuous Casting
+	of Steel Slabs},
+  journal = {Metallurgical and Materials Transactions B},
+  year = {2008},
+  volume = {39B:1},
+  pages = {94-107},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Davidson1987,
+  author = {Davidson, P. A. and Boysan, F.},
+  title = {The importance of secondary flow in the rotary electromagnetic stirring
+	of steel during continuous casting},
+  journal = {Applied Scientific Research},
+  year = {1987},
+  volume = {44},
+  pages = {241-259},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@UNPUBLISHED{Desjardins,
+  author = {Desjardins, O. and Moureau, V.},
+  title = {Methods for Multiphase flows with high density ratio},
+  note = {Center for Turbolence Research},
+  year = {2010},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Duan2008,
+  author = {Duan, X. and Ma, Y. and Zhang, R.},
+  title = {Optimal shape control of fluid flow using variational level set method},
+  journal = {Physics Letters A},
+  year = {2008},
+  volume = {372},
+  pages = {1374-1379},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@ARTICLE{Duan2008a,
+  author = {Duan, X. and Ma, Y. and Zhang, R.},
+  title = {Shape-topology optimization of stokes flow via variational level
+	set method},
+  journal = {Applied Mathematics and Computation},
+  year = {2008},
+  volume = {202},
+  pages = {200-209},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@ARTICLE{Dubke1988,
+  author = {Dubke, M. and Tacke, K. H. and Spitzer, K. H. and Schwerdtfeger,
+	K.},
+  title = {Flow fields in Electromagnetic Stirring of Rectaangular Strands with
+	Linear Inductors: Part I. Theory and Experiments with Cold Models},
+  journal = {Metallurgical Transactions B},
+  year = {1988},
+  volume = {19},
+  pages = {581-593},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@CONFERENCE{El-Kaddah1999,
+  author = {El-Kaddah, N. and Natarajan, T. T.},
+  title = {International Conference on CFD in the Minerals and Processing Industries},
+  booktitle = {Electromagnetic stirring of steel: effect of stirrer design on mixing
+	in horizontal electromagnetic stirring of steel slabs},
+  year = {1999},
+  address = {Melbourne, Australia},
+  month = {December},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@BOOK{EnrightD.2003,
+  title = {Robust Treatment of Interfaces for Fluid Flows and Computer Graphics},
+  publisher = {Springe-Verlag},
+  year = {2003},
+  editor = {Hou, T. and Tadmor, E.},
+  author = {Enright, D. and Fedkiw, R.},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@CONFERENCE{Enright2003,
+  author = {Enright, D. and Fedkiw, R.},
+  title = {Joint Fluids Engeneering Conference},
+  booktitle = {Using the Particle Level Set Method and a Second Order Accurate Pressure
+	Boundary Condition for Free Surface Flows},
+  year = {2003},
+  address = {Honolulu, Hawaii USA},
+  month = {July},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{D.2002,
+  author = {Enright, D. and Fedkiw, R. and Ferziger, J. and Mitchell, I.},
+  title = {A Hybrid Particle Level Set Method for Improved Interface Capturing},
+  journal = {Journal of Computational Physics},
+  year = {2002},
+  volume = {183},
+  pages = {83-116},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{1991,
+  author = {Enright, D. and Fedkiw, R. and Ferziger, J. and Mitchell, I.},
+  title = {Semi-Lagrangian Integration Schemes for Atmospheric Models},
+  journal = {Monthly Weather Review},
+  year = {1991},
+  volume = {119},
+  pages = {2206-2223},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{D.2005,
+  author = {Enright, D. and Losasso, F. and Fedkiw, R.},
+  title = {A Fast and Accurate Semi-Lagrangian Particle Level Set Method},
+  journal = {Computer and Structures},
+  year = {2005},
+  volume = {83},
+  pages = {479-490},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Esedoglu2008,
+  author = {Esedoglu, S. and Smereka, P.},
+  title = {A variational formulation for a level set representation of multiphase
+	flow and area preserving curvature flow},
+  journal = {Communications in Mathematical Sciences},
+  year = {2008},
+  volume = {6},
+  pages = {125-148},
+  owner = {luca.marioni},
+  timestamp = {2014.12.01}
+}
+
+@ARTICLE{Fujisaki2001,
+  author = {Fujisaki, K.},
+  title = {In-Mold Electromagnetic Stirring in Continuous Casting},
+  journal = {IEEE Transactions on Industry Applications},
+  year = {2001},
+  volume = {8},
+  pages = {2591-2598},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@CONFERENCE{Galdiz2014,
+  author = {Galdiz, P. and Palacios, J. and Arana, J. L. and Thomas, B. G.},
+  title = {European Continuous Casting Conference},
+  booktitle = {Round Continuous Casting with EMS-CFD Coupled},
+  year = {2014},
+  pages = {1312-1321},
+  address = {Graz, Austria},
+  month = {June 23-26},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Gomez2014,
+  author = {Gomez, H. and Reali, A. and Sangalli, G.},
+  title = {Accurate, efficient, and (iso)geometrically flexible collocation
+	methods for phase-field models},
+  journal = {Journal of Computational Physics},
+  year = {2014},
+  volume = {262},
+  pages = {153-171},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@PHDTHESIS{Guillaume2011,
+  author = {Guillaume, F.},
+  title = {Elements finis stabilises pour le remplissage en fonderie a haut
+	Reynolds},
+  school = {Ecole nationale superieure des mines de Paris},
+  year = {2011},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Haijun2013,
+  author = {Haijun, G. and Xinzhong, L. and Xueyi, F. and Juhong, Q. and Daming,
+	X. Jingjie, G.},
+  title = {Numerical simulation of flow and heat transfer of continous cast
+	steel slab under traveling magnetic field},
+  journal = {China foudry},
+  year = {2013},
+  volume = {10},
+  pages = {92-98},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Haiqi2008,
+  author = {Haiqi, Y. and Baofeng, W. and Huiqin, L. and Jianchao, L.},
+  title = {Influence of electromagnetic brake on flow field of liquid steel
+	in the slab continuous casting mold},
+  journal = {Journal of Materials Processing Technology},
+  year = {2008},
+  volume = {202},
+  pages = {179-187},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Harlow1965,
+  author = {Harlow, F. H. and Welch, J. E.},
+  title = {Numerical Calculation of Time-Dependent Viscous Incompressible Flow
+	of Fluid with Free Surface},
+  journal = {The Physics of Fluids},
+  year = {1965},
+  volume = {8},
+  pages = {2182-21-89},
+  number = {12},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@CONFERENCE{Hibbeler2013,
+  author = {Hibbeler, L. C. and Thomas, B. G.},
+  title = {AISTech Conference Proceedings},
+  booktitle = {Mold Slag Entrainment Mechanisms in Continuous Casting Molds},
+  year = {2013},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Hirayama2004,
+  author = {Hirayama, R. and Fujisaki, K. and Yamada, T.},
+  title = {Dual In-Mold Electromagnetic Stirring in Continuous Casting},
+  journal = {IEEE Transactions on Magnetics},
+  year = {2004},
+  volume = {40},
+  pages = {2095-2098},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{Javurek2008,
+  author = {Javurek, M. and Barna, M. and Gittler, P. and Rockenschaub, K. and
+	Lechner, M.},
+  title = {Flow Modelling in Continuous Casting of Round-Bloom Strands with
+	Electromagnetic Stirring},
+  journal = {Steel Research International},
+  year = {2008},
+  volume = {79},
+  pages = {671-626},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@CONFERENCE{Kunstreich2014,
+  author = {Kunstreich, S. and Gautreau, T. and Ren, J. Y.},
+  title = {European Continuous Casting Conference},
+  booktitle = {Drvrlopment and validation of Multi-Mode EMB, a new electromagnetic
+	brake for thin slab casters},
+  year = {2014},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@CONFERENCE{Lavers2008,
+  author = {Lavers, J. D.},
+  title = {International Scientific Colloquium - Modelling for electromagnetic
+	Processing},
+  booktitle = {State of the art of numerical modelling for electromagnetic processing
+	of metallic material},
+  year = {2008},
+  address = {Hannover},
+  month = {October},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Li2010,
+  author = {Li, C. and Xu, C. and Gui, C. and Fox, M. D.},
+  title = {Distance Regularized Level Set Evolution and Its Application to Image
+	Segmentation},
+  journal = {IEEE Transactions on Image Processing},
+  year = {2010},
+  volume = {19},
+  pages = {3243-3254},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@CONFERENCE{Li2005,
+  author = {Li, C. and Xu, C. and Gui, C. and Fox, M. D.},
+  title = {IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+  booktitle = {Level Set Evolution Without Re-initialization: A New Variational
+	Formulation},
+  year = {2005},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@ARTICLE{Li2012,
+  author = {Li, M. and He, C. and Zhan, Y.},
+  title = {Adaptive Regularized Level Set Method for Weak Boundary Object Segmentation},
+  journal = {Mathematical Problems in Engineering},
+  year = {2012},
+  volume = {2012},
+  pages = {1-16},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@ARTICLE{Lin2008,
+  author = {Lin, S. Y. and Kuo, S. K.},
+  title = {Electromagnetic Force Predictions of a Strand Electromagnetic Stirring
+	System Using an Analytical Model},
+  journal = {China Steel Technical Report},
+  year = {2008},
+  volume = {21},
+  pages = {29-33},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{F.2006,
+  author = {Losasso, F. and Fedkiw, R. and Osher, S.},
+  title = {Spatially Adaptive Techniques for Level Set Methods and Incompressible
+	Flow},
+  journal = {Computers and Fluids},
+  year = {2006},
+  volume = {35},
+  pages = {995-1010},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@MANUAL{zazza,
+  title = {Level Set Methods - Overview},
+  author = {Maistrou, A.},
+  organization = {TUM},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@ARTICLE{Man2003,
+  author = {Man, Y. H. and Hyun, G. L. and Seung, H. S.},
+  title = {Numerical simulation of three-dimensional flow, heat transfer, and
+	solidification of steel in continuous casting mold with electromagnetic
+	brake},
+  journal = {Journal of Materials Processing Technology},
+  year = {2003},
+  volume = {133},
+  pages = {322-339},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Moffatt1991,
+  author = {Moffatt, H. K.},
+  title = {Electromagnetic Stirring},
+  journal = {Physics Fluids A},
+  year = {1991},
+  volume = {3},
+  pages = {1336-1343},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{Mut2004,
+  author = {Mut, F. and Buscaglia, G. C. and Dari, E. A.},
+  title = {A NEW MASS-CONSERVING ALGORITHM FOR LEVEL SET REDISTANCING ON UNSTRUCTURED
+	MESHES},
+  journal = {Mecanica Computacional},
+  year = {2004},
+  volume = {23},
+  pages = {1659-1678},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@ARTICLE{NagrathS.2005,
+  author = {Nagrath, S. and Jansen, K. E. and Lahey, R. T.},
+  title = {Computation of incompressible bubble dynamics with a stabilized finite
+	element level set method},
+  journal = {Computer methods in applied mechanics and engineering},
+  year = {2005},
+  volume = {194},
+  pages = {4565-4587},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Natarajan2004,
+  author = {Natarajan, T. T. and El-Kaddah, N.},
+  title = {Finite element analysis of electromagnetic and fluid flow phenomena
+	in rotary electromagnetic stirring of steel},
+  journal = {Applied Mathematical Modelling},
+  year = {2004},
+  volume = {28},
+  pages = {47-61},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@BOOK{Osher2003,
+  title = {Level Set Methods and Dynamic Implicit Surfaces},
+  publisher = {Springer},
+  year = {2003},
+  editor = {Antman, S. S. and Marsden, S. S. and Sirovich, L.},
+  author = {Osher, S. and Fedkiw, R.},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{S.2001,
+  author = {Osher, S. and Fedkiw, R.},
+  title = {Level Set Methods: An Overview and Some Recent Results},
+  journal = {Journal of Computational Physics},
+  year = {2001},
+  volume = {169},
+  pages = {463-502},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Pijl2004,
+  author = {van der Pijl, S. P. and Segal, A. and Vuik, C. and Wesseling, P.},
+  title = {A mass-conserving Level-Set method for modelling of multi-phase flows},
+  journal = {International Journal for Numerical Methods in Fluids},
+  year = {2004},
+  volume = {47},
+  pages = {339-361},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@PHDTHESIS{PinoMunoz2012,
+  author = {Pino Munoz, D. H.},
+  title = {High-performance computing of sintering process at particle scale},
+  school = {Ecole Nationale Superiore des Minues},
+  year = {2012},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Ren2014,
+  author = {Ren, Z.},
+  title = {Variational Level Set Method for Two-Stage Image Segmentation Based
+	on Morphological Gradients},
+  journal = {Mathematical Problems in Engineering},
+  year = {2014},
+  volume = {2041},
+  pages = {1-11},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@PHDTHESIS{Rocco2009,
+  author = {Rocco, G.},
+  title = {Simulazione numerica di moti a superficie libera mediante il metodo
+	VOF},
+  school = {Universita degli studi di Napoli: Federico II},
+  year = {2009},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@ARTICLE{Rywotcki2014,
+  author = {Rywotcki, M. and Malinowski, Z. and Jielzecki, J. and Goldasz, A.},
+  title = {Modelling liquid steel motion caused by electromagnetic stirring
+	in continuous casting steel process},
+  journal = {Archives of Metallurgy and Materials},
+  year = {2014},
+  volume = {59},
+  pages = {487-492},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Satou2009,
+  author = {Satou, S and Fujisaki, K.},
+  title = {Evaluation of the influence of the time-varying electromagnetic component
+	in M-EMS on flow at free surface},
+  journal = {Electric Engineering in Japan},
+  year = {2009},
+  volume = {177},
+  pages = {124-129},
+  number = {2},
+  owner = {luca.marioni},
+  timestamp = {2015.01.08}
+}
+
+@CONFERENCE{Seden2014,
+  author = {Seden, M. and Jacobson, N. and Lehman, A. and Eriksson, J.},
+  title = {European Continuous Casting Conference},
+  booktitle = {Control of Flow Behaviour by FC Mold G3 in Slab Casting Process},
+  year = {2014},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Singh2014,
+  author = {Singh, R. and Thomas, B. G. and Vanka, P.},
+  title = {Large Eddy Simulations of Double-Ruler Electromagnetic Field Effect
+	on Transient Flow During Continuous Casting},
+  journal = {Metallurgical and Materials Transactions B},
+  year = {2014},
+  volume = {45},
+  pages = {1098-1115},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{Spitzer1986,
+  author = {Spitzer, K. H. and Dubke, M. and Schwerdtfeger, K.},
+  title = {Rotational Electromagnetic Stirring in Continuous Casting of Round
+	Strands},
+  journal = {Metallurgical Transactions B},
+  year = {1986},
+  volume = {17},
+  pages = {119-131},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@TECHREPORT{Stal2014,
+  author = {Stal, R. and Hanley, P.},
+  title = {Electromagnetic stirring in aluminium ladles},
+  institution = {ABB},
+  year = {2014},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Strain1998,
+  author = {Strain, J.},
+  title = {Semi-Lagrangian Methods for Level-Set Equations},
+  journal = {Journal of Computational Physics},
+  year = {1999},
+  volume = {151},
+  pages = {498-533},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@BOOK{Thomas1999a,
+  title = {Continuous Casting: Modeling},
+  publisher = {Pergamon Elsevier Science Ltd.},
+  year = {1999},
+  editor = {Dantzig, J. and Greenwell, A. and Michalczyk},
+  author = {Thomas, B. G.},
+  volume = {2},
+  address = {Oxfords, UK},
+  owner = {luca.marioni},
+  timestamp = {2014.12.04}
+}
+
+@CONFERENCE{Thomas1999,
+  author = {Thomas, B. G. and Bai, H. B. and Sivaramakrishnan, S. and Vanka,
+	P.},
+  title = {International Symposium on Cutting Edge of Computer Simulation of
+	Solidification and Process},
+  booktitle = {Detailed Simulation of Flow in Continuous Casting of Steel using
+	k-e, LES, and PIV},
+  year = {1999},
+  address = {Osaka, Japan},
+  month = {Nov. 14-16},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@CONFERENCE{Thomas2009,
+  author = {Thomas, B. G. and Chaudhary, R.},
+  title = {Proceedings, 6th International Conference on Electromagnetic Processing
+	of Materials EPM},
+  booktitle = {State of the Art in Electromagnetic Flow Control in Continuous Casting
+	of Steel Slabs: Modeling and Plant Validation},
+  year = {2009},
+  pages = {9-14},
+  address = {Dresden, Germany},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Thomas2006,
+  author = {Thomas, B. G. and Yuan, Q. and Zhao, B. and Vanka, P.},
+  title = {Transient Fluid-Flow Phenomena in teh Continuous Steel-Slab Casting
+	Mold and Defect Formation},
+  journal = {Journal of Metals - electronic edition},
+  year = {2006},
+  volume = {1},
+  pages = {1-20},
+  month = {December},
+  owner = {luca.marioni},
+  timestamp = {2014.12.05}
+}
+
+@CONFERENCE{Vogl2014,
+  author = {Vogl, N. and Odenthal, H. J. and Reifferscheid, M.},
+  title = {European Continuous Casting Conference},
+  booktitle = {Fluid flow in continuous casting affected by magnetic fields},
+  year = {2014},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{Wang2010,
+  author = {Wang, H. and Zhu, M. and Yu, H.},
+  title = {Numerical analysis of electromagnetic field and flow field in high
+	casting speed slab continuous casting mold with traveling magnetic
+	field},
+  journal = {Journal of iron and steel research, international},
+  year = {2010},
+  volume = {17(9)},
+  pages = {25-30},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@CONFERENCE{Wang,
+  author = {Wang, Y. and Yang, Z. and Zhang, X. and Wang, B. and Liu, Q.},
+  title = {European Continuous Casting Conference},
+  booktitle = {3D Numerical Simulation of Flow and Solidification of Molten Steel
+	in Bloom Continuous Casting Mold with Electromagnetic Stirring},
+  year = {2014},
+  owner = {luca.marioni},
+  timestamp = {2014.11.27}
+}
+
+@ARTICLE{Wu2014,
+  author = {Wu, H. and Geng, X. and Zhang, X. and Qiu, M. and Jiang, K. and Tang,
+	L. and Dong, J.},
+  title = {A self-adaptive distance regularized level set evolution method for
+	optical disk segmentation},
+  journal = {Bio-Medical Materials and Engineering},
+  year = {2014},
+  volume = {24},
+  pages = {3199-3206},
+  owner = {luca.marioni},
+  timestamp = {2014.11.25}
+}
+
+@ARTICLE{Yuan2014,
+  author = {Yuan, M. and Cao, L. and Xu, Y. and Song, X.},
+  title = {Numerical Simulation on Effects of Electromagnetic Force on the Centrifugal
+	Casting Process of High Speed Steel Roll},
+  journal = {Modeling and Numerical Simulation of Material Science},
+  year = {2014},
+  volume = {4},
+  pages = {20-24},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{2007,
+  author = {Zhang, H. and Nagaumi, H. and Zuo, Y. and Cui, J.},
+  title = {Coupled modeling of electromagnetic field, fluid flow, heat transfer
+	and solidification during low frequency electromagnetic casting of
+	7XXX aluminium alloys
+	
+	Part 1: Development of a mathematical model and comparison with experimental
+	results},
+  journal = {Materials Science \& Engineering, A: Structural Materials: Properties,
+	Microstructure and Processing},
+  year = {2007},
+  volume = {448},
+  pages = {189-203},
+  owner = {luca.marioni},
+  timestamp = {2014.11.20}
+}
+
+@ARTICLE{1996,
+  author = {Zhao, H. K. and Chan, T. and Merriman, B. and Osher, S.},
+  title = {A Variational Level Set Approach to Multiphase Motion},
+  journal = {Journal of Computational Physics},
+  year = {1996},
+  volume = {127},
+  pages = {179-195},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@ARTICLE{1998,
+  author = {Zhao, H. K. and Merriman, B. and Osher, S. and Wang, L.},
+  title = {Capturing the Behavior of Bubbles and Drops Using the Variational
+	Level Set Approach},
+  journal = {Journal of Computational Physics},
+  year = {1998},
+  volume = {143},
+  pages = {495-518},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@BOOK{Zhou2009,
+  title = {Image Segmentation of Level Set Based on Maximization of Between-Class
+	Variance and Distance Constraint Function},
+  publisher = {Springe-Verlag},
+  year = {2009},
+  editor = {Huang, S.},
+  author = {Zhou, C. and Hu, Z. and Liu, S. and Cui, M. and Xu, R.},
+  owner = {luca.marioni},
+  timestamp = {2014.11.26}
+}
+
+@PROCEEDINGS{2003,
+  title = {Mold Slag Entrainment Mechanisms in Continuous Casting Models},
+  year = {2003},
+  editor = {Hibbeler, L. C. and Thomas, B. G.},
+  organization = {AISTech},
+  owner = {luca.marioni},
+  timestamp = {2014.12.05}
+}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_review:}
+
+@comment{jabref-meta: groupsversion:3;}
+
+@comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 ExplicitGroup:Level Set\;0\;1991\;1996\;1998\;Ausas2010\;Basset2009\
+;D.2002\;D.2005\;Desjardins\;Duan2008\;Duan2008a\;Enright2003\;Enright
+D.2003\;Esedoglu2008\;F.2006\;Gomez2014\;Guillaume2011\;Haijun2013\;Li
+2005\;Li2010\;Li2012\;Mut2004\;NagrathS.2005\;Osher2003\;Pijl2004\;Pin
+oMunoz2012\;Ren2014\;Rocco2009\;S.2001\;Strain1998\;Wu2014\;Zhou2009\;
+zazza\;;
+1 ExplicitGroup:Fluid\;0\;Brown2001\;Harlow1965\;;
+1 ExplicitGroup:Continuous Casting\;0\;2003\;2007\;2014\;Baokuan2006\;
+Barglik2010\;Barna2009\;Barna2014\;Beitelman2005\;Ben-David\;Chaudhary
+2011\;Cukierski2008\;El-Kaddah1999\;Fujisaki2001\;Galdiz2014\;Haiqi200
+8\;Hibbeler2013\;Hirayama2004\;Javurek2008\;Kunstreich2014\;Lavers2008
+\;Man2003\;Natarajan2004\;Rywotcki2014\;Satou2009\;Seden2014\;Singh201
+4\;Stal2014\;Thomas1999\;Thomas1999a\;Thomas2006\;Thomas2009\;Vogl2014
+\;Wang\;Wang2010\;Yuan2014\;;
+1 ExplicitGroup:Anal\;0\;1991a\;Asai1981\;Besson1991\;Davidson1987\;Du
+bke1988\;Lin2008\;Moffatt1991\;Spitzer1986\;;
+}
+
